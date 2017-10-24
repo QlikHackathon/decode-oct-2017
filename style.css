@@ -191,8 +191,8 @@ h1 {
 
 .question-mark-button {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 3px;
+  top: 3px;
   height: 50px;
   width: 50px;
   border: 0;
@@ -210,6 +210,7 @@ h1 {
   width: 100%;
   margin-left: 0%;
   margin-right: 0%;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -355,4 +356,128 @@ body {
 }
 .inactive {
     opacity: 0.2;
+}
+
+@media all and (min-width: 0px) and (max-width: 320px) {
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-left:-15px;
+    margin-top: 165%;
+  }
+}
+
+@media all and (min-width: 321px) and (max-width: 375px) {
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-left:-15px;
+    margin-top: 205%;
+  }
+}
+
+@media all and (min-width: 376px) and (max-width: 414px) {
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-left:-15px;
+    margin-top: 220%;
+  }
+}
+
+@media all and (min-width: 415px) and (max-width: 768px) {
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-left: -15px;
+    margin-top: 134%;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 834px) {
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-left: -15px;
+    margin-top: 130%;
+  }
+}
+
+@media all and (min-width: 835px) and (max-width: 1024px) {
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-top: 135%;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 1229px) {
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-top: 90%;
+  }
+}
+
+@media all and (min-width: 1026px) {
+  .arrow {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-top: 45%;
+  }
+}
+
+
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+.animated{-webkit-animation-fill-mode:both;
+-moz-animation-fill-mode:both;
+-ms-animation-fill-mode:both;
+-o-animation-fill-mode:both;
+
+            animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+animation-fill-mode:both;
+-webkit-animation-duration:2s;
+-moz-animation-duration:2s;
+-ms-animation-duration:2s;
+-o-animation-duration:2s;
+animation-duration:2s;
+}
+
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }

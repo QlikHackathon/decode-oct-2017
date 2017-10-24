@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
     crossorigin="anonymous">
   <link href="style.css" rel="stylesheet">
-  
+
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
     crossorigin="" />
@@ -35,14 +35,24 @@
         </div>
 
         <div class="col col-md-10 overlay-text">
-            <h1 class="oswald">GOAL 14</h1>
+            <h1 class="oswald text-center">GOAL 14</h1>
             <h2 class="capitalized oswald">conserve and sustainbly use the oceans, seas and marine resources for sustainable development</h2>
             <h2>How are you helping #saveourocean?</h2>
             <p>The world's oceans drive global systems that make earth a habitable place for humankind. Careful management of our oceans is key to leading a sustainable future. Everyone is giving a hand – individually or in partnership.What are the committments by ocean basins? Which countries are involved? What type of organization are contributing?</p>
             <p>Explore the voluntary commitments that aim to contribute to the implementation of <a href="http://www.un.org/sustainabledevelopment/oceans/" target="_blank">GOAL 14</a>.</p>
+            <div class="arrow animated bounce">
+                <p style="margin-left: -8%; position: absolute; margin-top: -5%;">
+                   <!---
+                   <span class="badge badge-info">Scroll Down</span>
+                   --->
+                 </p>
+                <img width="50" height="50" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyDQoJbDE4OS45OTktMTkwYzIwLjE3OC0yMC4xNzgsNTMuMTY0LTE5LjkxMyw3My42NzIsMC41OTVsMCwwYzIwLjUwOCwyMC41MDksMjAuNzcyLDUzLjQ5MiwwLjU5NSw3My42NzFMMjkzLjc1MSw0NTUuODY4eiIvPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIyMC4yNDksNDU1Ljg2OGMyMC4xOCwyMC4xNzksNTMuMTY0LDE5LjkxMyw3My42NzItMC41OTVsMCwwYzIwLjUwOS0yMC41MDgsMjAuNzc0LTUzLjQ5MywwLjU5Ni03My42NzINCglsLTE5MC0xOTBjLTIwLjE3OC0yMC4xNzgtNTMuMTY0LTE5LjkxMy03My42NzEsMC41OTVsMCwwYy0yMC41MDgsMjAuNTA5LTIwLjc3Miw1My40OTItMC41OTUsNzMuNjcxTDIyMC4yNDksNDU1Ljg2OHoiLz4NCjwvc3ZnPg0K" />
+              </div>
         </div>
+
       </div>
     </div>
+    <div class="arrow bounce"></div>
     <div class="overlay-image"></div>
   </div>
   <div class="header">
@@ -61,9 +71,10 @@
       <h1 class="oswald"> Sustainable Developent Goals </h1>
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-8">
-      <div id="map">  
+      <div id="map">
         <div class="row">
           <div class="col-md-2"></div>
           <div class="col-md-8">
@@ -71,16 +82,21 @@
           </div>
           <div class="col-md-3"></div>
         </div>
-        <div id="mapid"></div>
+        <div class="container-fluid">
+          <div id="mapid"></div>
+        </div>
       </div>
     </div>
+
     <div class="col-md-4" style="margin-left:-50px">
       <div id="svg">
         <p class="center"> Sustainable Development Goals are categories chosen by the UN to focus commitments. <br /> Click on the categories to filter.</p>
-        <div id="targets" class="kpiAlignment" > </div>
+        <div id="targets" class="kpiAlignment"> </div>
         <div id="showEnities"></div>
       </div>
     </div>
+    <div>
+
   </div>
 
   <div class="filters">
@@ -104,7 +120,6 @@
     <h1 class="oswald">Lead Entities</h1>
     <div class="list-group" id="leadEntityList">
     </div>
-
   </div>
 
   <div class="container list-container">
