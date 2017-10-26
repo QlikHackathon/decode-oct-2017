@@ -8,6 +8,7 @@ var mymap = L.map('mapid', {
   zoomDelta: 0.5,
   zoomSnap: 0,
   trackResize: true,
+  scrollWheelZoom: false,
 }).setView([30, 2], 0);
 mymap.on('resize', function(e) {
   mymap.fitBounds([

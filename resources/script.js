@@ -224,7 +224,7 @@ function createCommitmentList() {
 }
 
 function createLeadEntityTypesList() {
-  
+
     let field = app.field("Lead entity type")
     let listener = () => {
       const $list = $('#leadEntityTypeList');
@@ -240,7 +240,7 @@ function createLeadEntityTypesList() {
         $list.append(item)
       })
     }
-  
+
     field.OnData.bind(listener)
     field.getData()
   }
