@@ -39,11 +39,6 @@ function main() {
     setupOceansHyperCube()
     setupFilterBarHyperCube()
 
-    createLeadEntityTypePieChart()
-    createOceanBasinsPieChart()
-    createLeadEntityPieChart()
-    createTargetsPieChart()
-
     var selState = app.selectionState()
     var listener = function() {
       updateFilterBar(selState.selections)
@@ -55,64 +50,6 @@ function main() {
     createLeadEntityTypesList()
     createLeadEntityList()
   })
-}
-
-function createLeadEntityTypePieChart() {
-  var listCols = [
-    {
-      qDef: { qFieldDefs: ['Lead entity type'] }
-    },
-    '=Count(distinct [Lead entity])'
-  ]
-
-  app.visualization
-    .create('treemap', listCols, { title: 'Lead Entity Type Pie Chart' })
-    .then(function(piechart) {
-      piechart.show('lead-entity-type-pie-chart')
-    })
-}
-
-function createLeadEntityPieChart() {
-  var listCols = [
-    {
-      qDef: { qFieldDefs: ['Lead entity'] }
-    },
-    '=Count([OceanActionID])'
-  ]
-
-  app.visualization
-    .create('treemap', listCols, { title: 'Lead Entity Pie Chart' })
-    .then(function(piechart) {
-      piechart.show('lead-entity-pie-chart')
-    })
-}
-function createTargetsPieChart() {
-  var listCols = [
-    {
-      qDef: { qFieldDefs: ['SDG Target'] }
-    },
-    '=Count([OceanActionID])'
-  ]
-  app.visualization
-    .create('treemap', listCols, { title: 'Targets Pie Charts' })
-    .then(function(piechart) {
-      piechart.show('targets-pie-chart')
-    })
-}
-
-function createOceanBasinsPieChart() {
-  var listCols = [
-    {
-      qDef: { qFieldDefs: ['Ocean Basins'] }
-    },
-    '=Count([OceanActionID])'
-  ]
-
-  app.visualization
-    .create('treemap', listCols, { title: 'Ocean Basins Pie Chart' })
-    .then(function(piechart) {
-      piechart.show('ocean-basins-pie-chart')
-    })
 }
 
 function createGoalsAndSDGTargets() {
