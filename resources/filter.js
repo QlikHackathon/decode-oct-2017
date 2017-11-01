@@ -1,11 +1,12 @@
-function updateFilterBar (selections) {
+function updateFilterBar(selections) {
   $('#filters-bar').empty()
   selections.forEach(item => {
     if (item.fieldName !== 'Goal ID') {
-      var filters = item.qSelected.split(',')
+      var filters = item.selectedValues
       filters.forEach(filter => {
-        filter = filter.trim()
-        $('#filters-bar').append(`<span class="filter"><a href="#" onclick="unclickFilter('${item.fieldName}', '${filter}')" class="delete-filter"><img class="close-icon" src="resources/images/close.png"></a><span> ${filter} </span></span>`)
+        $('#filters-bar').append(
+          `<span class="filter"><a href="#" onclick="unclickFilter('${item.fieldName}', '${filter.qName}')" class="delete-filter"><img class="close-icon" src="resources/images/close.png"></a><span> ${filter.qName} </span></span>`
+        )
       })
     }
   })
