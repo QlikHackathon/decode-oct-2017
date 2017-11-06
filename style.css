@@ -110,6 +110,18 @@ h1 {
   padding-left: 10px;
 }
 
+#commitmentList {
+  flex: 1;
+  height: 400px;
+}
+
+.commitment-description {
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid red;
+}
+
 .qvt-chart-tooltip .value {
   margin-right: 10px;
 }
@@ -321,7 +333,7 @@ h1 {
 }
 
 .list-group a {
-  color: #3997d9;
+  color: #3997d9 !important;
 }
 
 .list-container h1 {
@@ -416,53 +428,5 @@ body {
   }
   60% {
     -webkit-transform: translateY(-15px);
-  }
-}
-
-@-moz-keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -moz-transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-  }
-}
-
-@-o-keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -o-transform: translateY(0);
-  }
-  40% {
-    -o-transform: translateY(-30px);
-  }
-  60% {
-    -o-transform: translateY(-15px);
-  }
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
   }
 }

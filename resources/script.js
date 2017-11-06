@@ -164,7 +164,8 @@ function createCommitmentList() {
     $list.empty()
     matrix.forEach(row => {
       let anchor = $(
-        `<a target='_blank' href='${row[1].qText}'>${row[0].qText}</a>`
+        // `<a target='_blank' href='${row[1].qText}'>${row[0].qText}</a>`
+        `<a onClick='commitmentClick("${row[1].qText}")'>${row[0].qText}</a>`
       )
       let item = $(`<div></div>`)
       item.append(anchor)
@@ -239,4 +240,24 @@ function createLeadEntityList() {
       $list.scrollTop(0)
     }
   )
+}
+
+function commitmentClick(commitmentLink) {
+  $('#commitment-description__link')[0].href = commitmentLink
+  fetch("http://cors-anywhere.herokuapp.com/" + commitmentLink)
+  .then((value) => {
+    return value.text();
+  })
+  .then((text) => {
+    var index = text.indexOf('id="intro')
+    var string = text.slice(index+13, index+2000)
+    var openDiv = string.indexOf('>')
+    var closeDiv = string.indexOf('</div>')
+    string = string.slice(openDiv+1, closeDiv).trim()
+    console.log(string);
+    $('.commitment-description__content').empty().append(string)
+  })
+  .catch((err) => {
+    throw err;
+  })
 }
